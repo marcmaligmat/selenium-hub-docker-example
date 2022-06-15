@@ -1,0 +1,28 @@
+docker run -d -p 4444:4444 -p 5901:5900 --shm-size=2g selenium/standalone-chrome-debug
+
+#docker image id only
+docker image ls -q
+
+#remove container before removing images
+docker container rm -f $(docker container ls -aq)
+
+#remove image
+docker image rm -f $(docker image ls -aq)
+
+
+docker compose up -p {container_name} -d
+
+#interactive terminal
+docker exec -it {container_id} bash
+
+#interactive terminal for image
+docker run -it name-of-image bash
+
+
+https://github.com/SeleniumHQ/docker-selenium/tree/selenium-3
+https://www.youtube.com/watch?v=GxktKTtnSfk
+#creating grid
+docker network create grid
+
+#checking network
+docker network ls

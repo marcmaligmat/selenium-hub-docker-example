@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  selenium_debug_container:
+    image: selenium/standalone-chrome-debug
+    shm_size: 2gb
+    ports:
+      - 4555:4444
+      - 5901:5900
